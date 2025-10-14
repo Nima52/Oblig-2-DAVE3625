@@ -15,20 +15,43 @@ Do the following:
 
 You can pick one of the following use cases:
 
-1. Predict stock market price for TESLA.
+1. Predict stock market price for GameStop.
+https://www.kaggle.com/datasets/hananxx/gamestop-historical-stock-pricesLinks to an external site.
 Make a prediction algorithm which predicts the price of this stock on a specific date. Input will be date and output should be price of that stock (close value in the data file).
-You should also show the prediction percentage score.
-Data file: TESLA.csv
+You should also show the prediction accuracy score and confusion matrix.
+Data file: GME_stock.csv
 
 2. Predict passenger data for Ruter.
-Use Ruter-data.csv dataset (in data folder). I want you to make a prediction algorithm which predicts the number of passengers on a specific date for a specific bus (pick any one). Input should be date and output will be number of passengers
-You should also show the prediction percentage score. 
+Use Ruter-data.csv dataset (in data folder). I want you to make a prediction algorithm which predicts the number of passengers on a specific date for a specific bus (pick any one). Input should be date and output will be number of passengers You should also show the prediction accuracy score and confusion matrix.
 Data file: Ruter_data.csv
 
-3. Find your own dataset on https://www.kaggle.com/datasets and make a prediction algorithm using regression or classification. You should also show the  prediction percentage score.
-**IMPORTANT, you must  upload the dataset in your submission if you choose to pick your own dataset and prediction.**
+3. Bysykkel Station Popularity
+https://oslobysykkel.no/apne-data/historiskLinks to an external site.
+Using the Oslo Bysykkel dataset, create a algorithm that predicts whether a bike station is High, Medium, or Low popularity based on usage patterns.
 
-Remember, we are **not** looking for a 30-page submission. Do not make it too complicated. 
-<u>Keep it simple and to the point.</u>
+Details:
+Example input features: Station location, total trips started from station, total trips ended at station, average trip duration, day of week patterns
+Example output: Popularity category (High/Medium/Low usage)
+Data file: Bysykkel_09.csv (September 2025 data with about 138,000 trip records)
+
+Suggested steps:
+Data processing: Group trips by station id and calculate total metrics for each station (feel free to use a small subset of the stations to simplify the processing if needed). Create features like total_trips_started, total_trips_ended, avg_duration.
+Create a target variable: Calculate total station usage (trips ended + trips started). Classify stations into 3 categories based on usage. High: top 33%, medium middle 33% and low: bottom 33%.
+
+Train the model using these features (or others, you are free to choose which ones) to predict popularity category.
+
+Show prediction accuracy scores and confusion matrix.
+
+4. Find your own dataset online, for example on: https://www.kaggle.com/datasetsLinks to an external site.
+Make a prediction algorithm using regression or classification. You should also show the prediction accuracy score and confusion matrix.
+
+IMPORTANT, you must upload the dataset in your submission if you choose to pick your own dataset.
+
+Remember, we are not looking for a 30-page submission. Do not make it too complicated.
+Keep it simple and to the point.
 
 Feel free to ask us for help in the labs if you are stuck or need help.
+
+Datasets are available on the repository on GitHub:
+
+https://github.com/DAVE3625/Dave3625-Host-2025/tree/main/Mandatory%20Assignments/MA2/dataLinks to an external site.
